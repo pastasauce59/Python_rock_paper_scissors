@@ -37,15 +37,10 @@ print("Welcome to Rock, Paper, Scissors!")
 print("It's you vs the computer.")
 user_choice = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. \n")
 
-if int(user_choice) > 2:
+if int(user_choice) > 2 or int(user_choice) < 0:
     print("That is not a choice, automatic GAME OVER.")
 else:
-    if int(user_choice) == 0:
-        print(rock)
-    elif int(user_choice) == 1:
-        print(paper)
-    elif int(user_choice) == 2:
-        print(scissors)
+    print(map[int(user_choice)])
 
     print("Computer chose:")
     print(comp_choice)
@@ -60,8 +55,3 @@ else:
         print("It's a draw.")
     else:
         print("Computer Wins.")
-        # print(int(user_choice))
-        # print(computer_random_choice)
-
-# print(type(computer_random_choice))
-# print(computer_random_choice)
